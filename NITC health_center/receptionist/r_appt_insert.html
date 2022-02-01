@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insert New Appointment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+
+body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 20px;
+
+      background-image: url('G25_presentation.png');
+      background-repeat: no-repeat;
+      background-position: auto;
+      background-size: cover;
+      backdrop-filter: blur(0px);
+    }
+
+form {border: 0px solid #f1f1f1;}
+
+input {
+  width: 69%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+input[type="textarea"]{
+height: 100px;
+}
+
+button {
+  background-color: #045aaa;
+  color: white;
+  padding: 13px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 175px;
+  border-radius: 20px;
+}
+
+button:hover {
+  opacity: 0.8;
+  border-radius: 20px;
+}
+
+.cancelbtn {
+  background-color: #cce0ff;
+  color: black;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 35%;
+  height: 45%;
+}
+
+
+.container {
+  padding-left: 37%;
+  padding-right: 28%;
+}
+
+span.psw {
+  float: left;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1 align="center" font-family= 'Outfit'>Schedule new appointment</h1>
+
+<form action="r_appt_insert_backend.php" method="post">
+  <div class="imgcontainer">
+    <img
+    src="https://media.istockphoto.com/vectors/young-woman-secretary-answering-call-in-office-vector-id1208588832?k=20&m=1208588832&s=612x612&w=0&h=zc8TGI6ZS7tHS_KW4ez5JzL8Fo5DRgfYCqCDg8sJaI4="
+    alt="Avatar" class="avatar" style="height: 380; width: 480; Filter: Chroma(Color = #ffffff)">
+  </div>
+
+  <div class="container">
+    <label for="aptID"><b>Appointment ID&nbsp</b></label><br>
+    <input type="text" placeholder="Enter Appointment ID" name="aptID" id = "aptID" required><br>
+
+    <label for="createdby"><b>Receptionist ID&nbsp</b></label><br>
+    <input type="text" placeholder="Enter Receptionist ID" name="createdby" id = "createdby" required><br>
+
+    <label for="patient"><b>Student ID&nbsp</b></label><br>
+    <input type="text" placeholder="Enter Student ID" name="patient" id = "patient" required><br>
+
+    <label for="doctor"><b>Doctor ID&nbsp</b></label><br>
+    <input type="text" placeholder="Enter Doctor ID" name="doctor" id = "doctor" required><br>
+
+    <label for="type"><b>Appointment Type&nbsp</b></label><br>
+    <input type="text" placeholder="Enter Appointment Type" name="type" id = "type" required><br>
+
+    <button type="submit">Submit</button>
+    <button type="button" class="cancelbtn" onclick="goBack()">Cancel</button><br>
+      <script>
+        function goBack() {
+          window.history.back();
+        }
+        </script>
+
+
+  </div>
+</form>
+
+<br>
+<br>
+
+</body>
+</html>
